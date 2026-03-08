@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamzidan — Personal Website</title>
+  <meta name="description"
+    content="Personal portfolio website of Tamzidan. Modern, minimalist design showcasing projects, skills, and contact information." />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="navbar-logo">
+        <span class="logo-dot"></span>
+        tamzidan
+      </a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <!-- Animated dot grid background (animejs.com style) -->
+    <div class="hero-dot-grid" id="heroDotGrid"></div>
+    <!-- Floating particles -->
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="container hero-inner">
+      <!-- Profile Image with animated ring -->
+      <div class="hero-profile animate-on-scroll" data-animation="fadeIn">
+        <div class="profile-ring" id="profileRing">
+          <svg viewBox="0 0 200 200" class="profile-ring-svg">
+            <circle cx="100" cy="100" r="95" class="ring-track" />
+            <circle cx="100" cy="100" r="95" class="ring-progress" id="ringProgress" />
+            <circle cx="100" cy="100" r="85" class="ring-inner" />
+          </svg>
+        </div>
+        <div class="profile-image-wrapper">
+          <img src="luffy.png" alt="Tamzidan" class="profile-image" />
+        </div>
+        <div class="profile-glow"></div>
+      </div>
+
+      <div class="hero-badge animate-on-scroll" data-animation="fadeIn" data-delay="200">
+        <span class="badge">Available for work</span>
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        Hi, I'm Tamzidan.<br />
+        I build things for the web.
+      </h1>
+      <p class="hero-subtitle animate-on-scroll" data-animation="slideUp" data-delay="400">
+        A passionate developer crafting beautiful, performant, and user-friendly digital experiences with clean code and
+        modern technologies.
+      </p>
+      <div class="hero-actions animate-on-scroll" data-animation="slideUp" data-delay="600">
+        <a href="#projects" class="btn btn-primary">
+          <i data-lucide="folder-open" class="btn-icon"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i data-lucide="mail" class="btn-icon"></i>
+          Contact Me
+        </a>
+      </div>
+    </div>
+    <div class="hero-gradient-blob hero-blob-1"></div>
+    <div class="hero-gradient-blob hero-blob-2"></div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header animate-on-scroll" data-animation="slideUp">
+        <span class="section-label">About</span>
+        <h2 class="section-title">A bit about me</h2>
+        <p class="section-subtitle">Get to know my background, passions, and what drives me to build.</p>
+      </div>
+      <div class="about-grid">
+        <div class="card about-card animate-on-scroll" data-animation="slideRight">
+          <div class="about-card-icon">
+            <i data-lucide="user-circle"></i>
+          </div>
+          <h3>Who I Am</h3>
+          <p>
+            I'm a full-stack developer with a deep love for clean design and delightful user experiences.
+            I believe that great software is not just functional — it should feel effortless and beautiful
+            to use. I'm always exploring new technologies and pushing the boundaries of the web.
+          </p>
+        </div>
+        <div class="card about-card animate-on-scroll" data-animation="slideRight" data-delay="150">
+          <div class="about-card-icon">
+            <i data-lucide="target"></i>
+          </div>
+          <h3>What I Do</h3>
+          <p>
+            From crafting pixel-perfect interfaces to building robust backend systems, I enjoy
+            working on the full spectrum of web development. I specialize in modern JavaScript
+            frameworks, responsive design, and creating seamless digital products.
+          </p>
+        </div>
+        <div class="card about-card animate-on-scroll" data-animation="slideRight" data-delay="300">
+          <div class="about-card-icon">
+            <i data-lucide="rocket"></i>
+          </div>
+          <h3>My Mission</h3>
+          <p>
+            I aim to create impactful digital products that solve real problems while maintaining
+            the highest standards of code quality and design. Continuous learning and collaboration
+            with like-minded people are at the core of my journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header animate-on-scroll" data-animation="slideUp">
+        <span class="section-label">Skills</span>
+        <h2 class="section-title">Technologies I work with</h2>
+        <p class="section-subtitle">A curated set of tools and technologies I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid animate-on-scroll" data-animation="staggerUp">
+        <div class="skill-pill"><i data-lucide="file-code-2" class="skill-icon"></i> HTML5</div>
+        <div class="skill-pill"><i data-lucide="paintbrush" class="skill-icon"></i> CSS3</div>
+        <div class="skill-pill"><i data-lucide="braces" class="skill-icon"></i> JavaScript</div>
+        <div class="skill-pill"><i data-lucide="atom" class="skill-icon"></i> React</div>
+        <div class="skill-pill"><i data-lucide="triangle" class="skill-icon"></i> Vue.js</div>
+        <div class="skill-pill"><i data-lucide="server" class="skill-icon"></i> Node.js</div>
+        <div class="skill-pill"><i data-lucide="database" class="skill-icon"></i> MySQL</div>
+        <div class="skill-pill"><i data-lucide="leaf" class="skill-icon"></i> MongoDB</div>
+        <div class="skill-pill"><i data-lucide="wind" class="skill-icon"></i> Tailwind CSS</div>
+        <div class="skill-pill"><i data-lucide="git-branch" class="skill-icon"></i> Git</div>
+        <div class="skill-pill"><i data-lucide="figma" class="skill-icon"></i> Figma</div>
+        <div class="skill-pill"><i data-lucide="box" class="skill-icon"></i> Laravel</div>
+        <div class="skill-pill"><i data-lucide="terminal" class="skill-icon"></i> TypeScript</div>
+        <div class="skill-pill"><i data-lucide="container" class="skill-icon"></i> Docker</div>
+        <div class="skill-pill"><i data-lucide="github" class="skill-icon"></i> GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header animate-on-scroll" data-animation="slideUp">
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">Featured work</h2>
+        <p class="section-subtitle">A selection of projects I've built — from concept to deployment.</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="card project-card animate-on-scroll" data-animation="slideUp">
+          <div class="project-card-header">
+            <div class="project-icon"><i data-lucide="globe"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View source"><i data-lucide="github"></i></a>
+              <a href="#" class="project-link" aria-label="Live preview"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-desc">A full-stack e-commerce application with cart functionality, payment integration, and
+            an admin dashboard for product management.</p>
+          <div class="project-tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="card project-card animate-on-scroll" data-animation="slideUp" data-delay="150">
+          <div class="project-card-header">
+            <div class="project-icon"><i data-lucide="message-square"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View source"><i data-lucide="github"></i></a>
+              <a href="#" class="project-link" aria-label="Live preview"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Real-time Chat App</h3>
+          <p class="project-desc">A real-time messaging application with WebSocket support, group chats, media sharing,
+            and push notifications.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Socket.io</span>
+          </div>
+        </div>
+
+        <div class="card project-card animate-on-scroll" data-animation="slideUp" data-delay="300">
+          <div class="project-card-header">
+            <div class="project-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View source"><i data-lucide="github"></i></a>
+              <a href="#" class="project-link" aria-label="Live preview"><i data-lucide="external-link"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Analytics Dashboard</h3>
+          <p class="project-desc">An interactive analytics dashboard with data visualization, real-time charts, and
+            customizable reporting tools.</p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">Tailwind</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll" data-animation="slideUp">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-subtitle">Have a project in mind or just want to say hi? Drop me a message.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="card contact-form animate-on-scroll" data-animation="slideRight" id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i data-lucide="send" class="btn-icon"></i>
+            Send Message
+          </button>
+        </form>
+        <div class="contact-info animate-on-scroll" data-animation="slideLeft" data-delay="200">
+          <div class="card contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="contact-info-label">Email</span>
+                <a href="mailto:hello@tamzidan.dev" class="contact-info-value">hello@tamzidan.dev</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span class="contact-info-label">Location</span>
+                <span class="contact-info-value">Indonesia</span>
+              </div>
+            </div>
+          </div>
+          <div class="card contact-socials-card">
+            <p class="contact-socials-label">Find me on</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="GitHub">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <i data-lucide="twitter"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <i data-lucide="youtube"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="#" class="navbar-logo">
+          <span class="logo-dot"></span>
+          tamzidan
+        </a>
+        <p class="footer-copy">&copy; 2026 Tamzidan. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero">Back to top <i data-lucide="arrow-up" class="btn-icon"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
